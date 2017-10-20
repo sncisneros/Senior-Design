@@ -1,24 +1,46 @@
-class Department{
-	
-	String name;
-	String depChair;
-	String college;
+package UAS
+import java.util.*
 
-	Department(String name. String depChair, String college){
+
+public class Department{
+	
+	long id;
+	String name;
+	User depChair;
+	College college;
+
+	Department(long id, String name, User depChair, College college){
+		this.id = id;
 		this.name= name;
 		this.depCair = depChair;
 		this.college = college;
+	}
+
+	long getId() {
+		return id;
 	}
 
 	String getName(){
 		return name;
 	}
 
-	String getDepChair(){
+	User getDepChair(){
 		return depChair;
 	}
 
-	String getCollege(){
+	College getCollege(){
 		return college;
+	}
+
+	void setName(String name){
+		this.name = name;
+	}
+
+	void setDepChair(User depChair){
+		this.depChair = depChair;
+	}
+
+	void setCollege(College college){
+		this.college = college;
 	}
 }

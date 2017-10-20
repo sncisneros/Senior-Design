@@ -1,35 +1,73 @@
-class User{
-	
-	String username;
-	String email;
-	String department;
-	String jobTitle;
-	String reportTo;
+package UAS
+import java.util.*
 
-	User(String username, String email, String department, String jobTitle, String reportTo){
-		this.username = username;
-		this.password = password;
+public class User{
+	
+	long id;
+	String userName;
+	String firstName;
+	String lastName
+	String email;
+	int phoneNumber;
+	Department department;
+
+	User(long id, String userName, String firstName, String lastName, String email, int phoneNumber, Department department){
+		this.id = id;
+		this.userName = userName;
+		this.firstName = firstName;
+		this.lastName = lastName;
 		this.email = email;
-		this.jobTitle = jobTitle;
+		this.phoneNumber = phoneNumber
+		this.department = department;
 	}
 
-	String getUsername(){
-		return username;
+	long getId() {
+		return id;
+	}
+
+	String getFirstName(){
+		return firstName;
+	}
+
+	String getLastName(){
+		return lastName;
 	}
 
 	String getEmail(){
 		return email;
 	}
 
-	String getDepartment(){
+	int getPhoneNumber(){
+		return phoneNumber;
+	}
+
+	Department getDepartment(){
 		return department;
 	}
 
-	String getJobTitle(){
-		return jobTitle;
+	void setUserName(String userName){
+		this.userName = userName;
 	}
 
-	String getReportTo(){
-		return reportTo;
+	void setFirstName(String firstName){
+		this.firstName = firstName;
 	}
+
+	void setLastName(String lastName){
+		this.lastName = lastName;
+	}
+
+	void setEmail(String email){
+		this.email = email;
+	}
+
+	void setPhoneNumber(int phoneNumber){
+		this.phoneNumber = phoneNumber;
+	}
+
+	void setDepartment(Department department){
+		this.department = department;
+	}
+
+
 }
